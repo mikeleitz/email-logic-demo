@@ -21,7 +21,7 @@ public class EmailServiceImpl implements EmailService {
   public Integer countDistinctEmails(@NonNull List<String> emails) throws InvalidEmailException {
     Integer returnValue = null;
 
-    log.debug("Starting counting distinct emails from list of [{}] emails.", emails.size());
+    log.debug("Started counting distinct emails from list of [{}] emails.", emails.size());
 
     Set<String> uniqueEmailAddresses = new HashSet<>();
     for (String emailAddressString : emails) {
@@ -79,7 +79,7 @@ public class EmailServiceImpl implements EmailService {
   }
 
   protected String normalizeDomainName(@NonNull String domainName) {
-    log.trace("Checking to see if domain name [{}] equals googlemail.", domainName);
+    log.trace("Started checking to see if domain name [{}] equals googlemail.", domainName);
 
     String domainResult = domainName;
     if (StringUtils.equalsIgnoreCase("googlemail", domainResult)) {

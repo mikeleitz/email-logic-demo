@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
+ * This is a generic exception that's thrown if a given email is invalid.
+ *
  * @author leitz@mikeleitz.com
  */
 @ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY, reason="Email address not valid.")
